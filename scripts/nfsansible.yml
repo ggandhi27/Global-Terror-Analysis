@@ -1,0 +1,17 @@
+
+---
+- hosts: nfs
+  tasks:
+   - command: "lvcreate --size 0.2 --name lv0gaurav hadoopvg"
+   - command: "mkfs.ext4 /dev/hadoopvg/lv0gaurav"
+   - file:
+      state: directory
+      path: "/nfsshare0gaurav"
+   - command: "mount /dev/hadoopvg/lv0gaurav /nfsshare0gaurav"
+   - copy: 
+      src: "exports"
+      dest: "/etc/exports"
+   - service:
+      name: "nfs"
+      state: started
+

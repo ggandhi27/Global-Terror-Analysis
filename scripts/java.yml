@@ -1,0 +1,11 @@
+---
+#package -a "name=jdk state=present use=yum"
+- hosts: ron
+  tasks:
+   - package:
+      name: "jdk"
+      state: present
+      use: "yum"
+   - unarchive:
+      src: "hadoop-2.8.0.tar.gz"
+      dest: "/etc"

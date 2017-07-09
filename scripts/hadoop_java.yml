@@ -1,0 +1,12 @@
+---
+- hosts: web
+  tasks:
+   - package:
+      name: "hadoop"
+      state: present
+      use: "yum"
+
+   - package:
+      name: "jdk"
+      state: present
+      use: "yum"

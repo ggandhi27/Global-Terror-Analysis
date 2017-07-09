@@ -1,0 +1,9 @@
+[master]
+192.168.43.26 ansible_ssh_user=root ansible_ssh_pass=redhat1
+
+
+[data0]
+192.168.43.21 ansible_ssh_user=root ansible_ssh_pass=q
+
+[nfs]
+192.168.43.15 ansible_ssh_user=root ansible_ssh_pass=ngpaaji123

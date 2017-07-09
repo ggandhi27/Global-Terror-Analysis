@@ -1,0 +1,15 @@
+---
+- hosts: web
+  tasks:
+   - command: "lvcreate --size 2G --name lv1 vg1"
+   - command: "mkfs.ext4 /dev/vg1/lv1"
+   - file:
+      state: directory
+      path: "/nfsshare"
+   - command: "mount /dev/vg1/lv1 /nfsshare"
+   - copy: 
+      src: "/root/exports"
+      dest: "/etc/exports"
+   - service:
+      name: "nfs"
+      state: started

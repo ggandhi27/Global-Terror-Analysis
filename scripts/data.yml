@@ -1,0 +1,24 @@
+
+- hosts: data0
+  tasks:
+
+
+
+   - copy :
+      src: .bashrc
+      dest: /root/
+
+   - copy:
+      src: core-site.xml
+      dest: /etc/hadoop/
+   - copy:
+      src: hdfs-site.xml
+      dest: /etc/hadoop/
+   - file:
+      state: directory
+      path: "/data0gaurav"
+
+   - command: "mount 192.168.43.15:/nfsshare0gaurav /data0gaurav"
+   - command: "hadoop-daemon.sh stop datanode"
+   - command: "hadoop-daemon.sh start datanode"
+

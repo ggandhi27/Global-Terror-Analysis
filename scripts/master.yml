@@ -1,0 +1,19 @@
+
+- hosts: master
+  tasks:
+
+
+
+   - copy :
+      src: .bashrc
+      dest: /root/
+
+   - copy:
+      src: core-site.xml
+      dest: /etc/hadoop/
+   - copy:
+      src: hdfs-site.xml
+      dest: /etc/hadoop/
+   - command: "hadoop-daemon.sh stop namenode"
+   - command: "hadoop-daemon.sh start namenode"
+
