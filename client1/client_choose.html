@@ -1,0 +1,57 @@
+<html>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+    width: 500px;
+    margin: 0 auto;
+   
+   
+}
+select {
+background-color: transparent;
+width: 25%;
+padding:  0;
+font-size: 20px;
+border: none;
+border-bottom: 1px solid #f1f1f1;
+}
+
+
+
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 15px -5px  0 80px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+</style>
+<form >
+<h1 text-align= "center">Choose Program</h1>
+<select id="menu" >
+<option value="scripts/country.py">Analysis of terror attacks in different countries</option>
+<option value="scripts/time.py">Analysis of terror attacks over the years</option>
+<option value="scripts/usa.py">Target of Terror Attacks on USA </option>
+<option value="scripts/attack.py">List of no of attacks in top countries </option>
+</select>
+<input type="button" id="link" onclick="selectOption()" value="Submit" />
+
+</form>
+<script>
+var s = document.getElementById("menu");
+var b = document.getElementById("link");
+b.onclick= function selectOption() {
+
+location.href= s.value;
+}
+
+</script>
+</html>

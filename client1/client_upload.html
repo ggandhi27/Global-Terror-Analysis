@@ -1,0 +1,45 @@
+<html>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+    width: 500px;
+    margin: 0 auto;
+}
+
+input[type=file], input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 20px 0 0 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 15px -5px  0 80px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+</style>
+
+
+
+<h1 align="center">File Upload</h1>
+<form enctype='multipart/form-data' action='scripts/file.py' method='POST'>
+<br><br>
+Upload Your File<br/><input type='file' name='f' />
+<br><br>
+ Name Your a file<br/><input type='text' name='n' />
+<br><br>
+<button type='submit'>Submit Your File</button>
+</form>
+</html>

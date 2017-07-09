@@ -1,0 +1,3 @@
+to copy a file in container
+#command
+docker cp src_path conatainer_name:/

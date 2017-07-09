@@ -1,0 +1,23 @@
+Terror attacks in USA
+Police : 155
+Unknown : 11
+Religious Figures/Institutions : 109
+NGO : 28
+Other : 1
+Journalists & Media : 56
+Tourists : 9
+Government (Diplomatic) : 144
+Transportation : 15
+Telecommunication : 10
+Business : 763
+Violent Political Party : 6
+Educational Institution : 165
+Utilities : 84
+Maritime : 7
+Government (General) : 323
+Abortion Related : 252
+Military : 186
+Terrorists/Non-State Militia : 8
+Airports & Aircraft : 51
+Private Citizens & Property : 303
+Food or Water Supply : 7
